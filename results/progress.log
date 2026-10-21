@@ -1,0 +1,286 @@
+08:22:15 model Qwen/Qwen3-4B label token ids [[4337], [13180], [8025], [40372, 16731, 4737]]
+08:22:20 driver: launching zero_shot
+08:22:30 model Qwen/Qwen3-4B label token ids [[4337], [13180], [8025], [40372, 16731, 4737]]
+08:26:26 zero_shot {'run': 'zero_shot', 'arm': 'zero_shot', 'eval_accuracy': 0.733, 'eval_loss': 2.649664252486895, 'eval_seconds': 206.99246954917908}
+08:26:30 driver: launching full_s1234
+08:26:40 model Qwen/Qwen3-4B label token ids [[4337], [13180], [8025], [40372, 16731, 4737]]
+08:26:47 full_s1234: trainable 4022468096 / 4022468096; mem after load 8.10 GB
+08:27:24 full_s1234 step 1/250 loss 3.4298 avg20 3.4298 t=37s peak=20.33GB
+08:28:16 full_s1234 step 26/250 loss 0.1110 avg20 0.4086 t=90s peak=20.33GB
+08:29:08 full_s1234 step 51/250 loss 0.2653 avg20 0.2331 t=141s peak=20.33GB
+08:29:59 full_s1234 step 76/250 loss 0.1315 avg20 0.2446 t=192s peak=20.33GB
+08:30:48 full_s1234 step 101/250 loss 0.4835 avg20 0.1919 t=241s peak=20.33GB
+08:31:40 full_s1234 step 126/250 loss 0.1774 avg20 0.1684 t=294s peak=20.33GB
+08:32:33 full_s1234 step 151/250 loss 0.1071 avg20 0.1631 t=346s peak=20.33GB
+08:33:24 full_s1234 step 176/250 loss 0.2021 avg20 0.1673 t=397s peak=20.33GB
+08:34:16 full_s1234 step 201/250 loss 0.1503 avg20 0.1175 t=449s peak=20.33GB
+08:35:06 full_s1234 step 226/250 loss 0.1802 avg20 0.1784 t=500s peak=20.33GB
+08:35:55 full_s1234 step 250/250 loss 0.4014 avg20 0.2204 t=548s peak=20.33GB
+08:39:23 full_s1234 {'run': 'full_s1234', 'arm': 'full', 'seed': 1234, 'status': 'ok', 'lr': 1e-05, 'steps': 250, 'trainable_params': 4022468096, 'total_params': 4022468096, 'train_seconds': 548.4262409210205, 'peak_alloc_gb': 20.332675584, 'peak_reserved_gb': 22.41855488, 'final_train_loss_avg20': 0.2204257370904088, 'eval_accuracy': 0.919, 'eval_loss': 0.20544869736890542, 'eval_seconds': 207.48014545440674}
+08:39:27 driver: launching lora_s1234
+08:39:37 model Qwen/Qwen3-4B label token ids [[4337], [13180], [8025], [40372, 16731, 4737]]
+08:39:44 lora_s1234: trainable 33030144 / 4055498240; mem after load 8.23 GB
+08:39:46 lora_s1234 step 1/250 loss 3.4298 avg20 3.4298 t=2s peak=8.98GB
+08:40:31 lora_s1234 step 26/250 loss 0.1936 avg20 0.3936 t=47s peak=9.82GB
+08:41:15 lora_s1234 step 51/250 loss 0.4228 avg20 0.2555 t=92s peak=9.95GB
+08:41:59 lora_s1234 step 76/250 loss 0.1455 avg20 0.2663 t=136s peak=9.95GB
+08:42:41 lora_s1234 step 101/250 loss 0.3977 avg20 0.2377 t=177s peak=9.95GB
+08:43:26 lora_s1234 step 126/250 loss 0.2254 avg20 0.1661 t=223s peak=9.95GB
+08:44:12 lora_s1234 step 151/250 loss 0.1157 avg20 0.1718 t=268s peak=9.95GB
+08:44:56 lora_s1234 step 176/250 loss 0.1213 avg20 0.1756 t=312s peak=9.95GB
+08:45:41 lora_s1234 step 201/250 loss 0.1653 avg20 0.1159 t=358s peak=9.95GB
+08:46:25 lora_s1234 step 226/250 loss 0.1667 avg20 0.1876 t=401s peak=9.95GB
+08:47:07 lora_s1234 step 250/250 loss 0.4778 avg20 0.2130 t=443s peak=9.95GB
+08:52:32 lora_s1234 {'run': 'lora_s1234', 'arm': 'lora', 'seed': 1234, 'status': 'ok', 'lr': 0.0002, 'steps': 250, 'trainable_params': 33030144, 'total_params': 4055498240, 'train_seconds': 443.1049745082855, 'peak_alloc_gb': 9.946401792, 'peak_reserved_gb': 10.544480256, 'final_train_loss_avg20': 0.2129720385186374, 'eval_accuracy': 0.917, 'eval_loss': 0.2183280315735028, 'eval_seconds': 325.1382505893707}
+08:52:34 driver: launching dora_s1234
+08:52:44 model Qwen/Qwen3-4B label token ids [[4337], [13180], [8025], [40372, 16731, 4737]]
+08:52:51 dora_s1234: trainable 34136064 / 4056604160; mem after load 8.25 GB
+08:52:55 dora_s1234 step 1/250 loss 3.4630 avg20 3.4630 t=4s peak=9.77GB
+08:54:50 dora_s1234 step 26/250 loss 0.2008 avg20 0.3391 t=120s peak=10.77GB
+08:56:45 dora_s1234 step 51/250 loss 0.2683 avg20 0.2586 t=235s peak=10.93GB
+08:58:39 dora_s1234 step 76/250 loss 0.1690 avg20 0.2409 t=348s peak=10.93GB
+RESUMED_FROM_FETCHED_RESULTS
+09:26:46 model Qwen/Qwen3-4B label token ids [[4337], [13180], [8025], [40372, 16731, 4737]]
+09:26:55 driver: launching dora_s1234
+09:27:05 model Qwen/Qwen3-4B label token ids [[4337], [13180], [8025], [40372, 16731, 4737]]
+09:27:39 dora_s1234: trainable 34136064 / 4056604160; mem after load 8.25 GB
+09:27:44 dora_s1234 step 1/250 loss 3.4630 avg20 3.4630 t=5s peak=9.77GB
+09:29:39 dora_s1234 step 26/250 loss 0.2008 avg20 0.3391 t=119s peak=10.77GB
+09:31:33 dora_s1234 step 51/250 loss 0.2683 avg20 0.2586 t=234s peak=10.93GB
+09:33:26 dora_s1234 step 76/250 loss 0.1690 avg20 0.2409 t=346s peak=10.93GB
+09:35:14 dora_s1234 step 101/250 loss 0.3612 avg20 0.2308 t=455s peak=10.93GB
+09:37:10 dora_s1234 step 126/250 loss 0.2207 avg20 0.1650 t=571s peak=10.93GB
+09:39:06 dora_s1234 step 151/250 loss 0.1211 avg20 0.1788 t=686s peak=10.93GB
+09:40:58 dora_s1234 step 176/250 loss 0.1498 avg20 0.1762 t=799s peak=10.93GB
+09:42:54 dora_s1234 step 201/250 loss 0.1707 avg20 0.1193 t=915s peak=10.93GB
+09:44:46 dora_s1234 step 226/250 loss 0.1657 avg20 0.1883 t=1026s peak=10.93GB
+09:46:33 dora_s1234 step 250/250 loss 0.4880 avg20 0.2162 t=1134s peak=10.93GB
+09:56:21 dora_s1234 {'run': 'dora_s1234', 'arm': 'dora', 'seed': 1234, 'status': 'ok', 'lr': 0.0002, 'steps': 250, 'trainable_params': 34136064, 'total_params': 4056604160, 'train_seconds': 1134.0459761619568, 'peak_alloc_gb': 10.92841984, 'peak_reserved_gb': 11.62870784, 'final_train_loss_avg20': 0.2162457182072103, 'eval_accuracy': 0.915, 'eval_loss': 0.21282096755417296, 'eval_seconds': 587.667813539505}
+09:56:25 driver: launching qlora_s1234
+09:56:35 model Qwen/Qwen3-4B label token ids [[4337], [13180], [8025], [40372, 16731, 4737]]
+09:56:45 qlora_s1234: trainable 33030144 / 2238840320; mem after load 2.81 GB
+09:56:47 qlora_s1234 step 1/250 loss 4.6127 avg20 4.6127 t=2s peak=3.48GB
+09:57:31 qlora_s1234 step 26/250 loss 0.1674 avg20 0.4271 t=47s peak=4.22GB
+09:58:16 qlora_s1234 step 51/250 loss 0.4263 avg20 0.3030 t=91s peak=4.33GB
+09:58:59 qlora_s1234 step 76/250 loss 0.1502 avg20 0.2752 t=135s peak=4.33GB
+09:59:41 qlora_s1234 step 101/250 loss 0.4279 avg20 0.2227 t=176s peak=4.33GB
+10:00:26 qlora_s1234 step 126/250 loss 0.1968 avg20 0.1545 t=221s peak=4.33GB
+10:01:11 qlora_s1234 step 151/250 loss 0.1133 avg20 0.1885 t=266s peak=4.33GB
+10:01:55 qlora_s1234 step 176/250 loss 0.2422 avg20 0.1756 t=310s peak=4.33GB
+10:02:40 qlora_s1234 step 201/250 loss 0.1781 avg20 0.1264 t=355s peak=4.33GB
+10:03:23 qlora_s1234 step 226/250 loss 0.1767 avg20 0.1999 t=398s peak=4.33GB
+10:04:04 qlora_s1234 step 250/250 loss 0.4436 avg20 0.2201 t=439s peak=4.33GB
+10:09:08 qlora_s1234 {'run': 'qlora_s1234', 'arm': 'qlora', 'seed': 1234, 'status': 'ok', 'lr': 0.0002, 'steps': 250, 'trainable_params': 33030144, 'total_params': 2238840320, 'train_seconds': 439.444961309433, 'peak_alloc_gb': 4.33225728, 'peak_reserved_gb': 5.123342336, 'final_train_loss_avg20': 0.22005522577092052, 'eval_accuracy': 0.9185, 'eval_loss': 0.21310672981786774, 'eval_seconds': 303.9652247428894}
+10:09:10 driver: launching full_s1235
+10:09:20 model Qwen/Qwen3-4B label token ids [[4337], [13180], [8025], [40372, 16731, 4737]]
+10:09:28 full_s1235: trainable 4022468096 / 4022468096; mem after load 8.10 GB
+10:10:05 full_s1235 step 1/250 loss 1.5686 avg20 1.5686 t=37s peak=20.33GB
+10:10:56 full_s1235 step 26/250 loss 0.0929 avg20 0.3390 t=88s peak=20.33GB
+10:11:45 full_s1235 step 51/250 loss 0.5380 avg20 0.2204 t=137s peak=20.33GB
+10:12:34 full_s1235 step 76/250 loss 0.1487 avg20 0.1999 t=186s peak=20.33GB
+10:13:25 full_s1235 step 101/250 loss 0.1271 avg20 0.1902 t=237s peak=20.33GB
+10:14:14 full_s1235 step 126/250 loss 0.1917 avg20 0.2093 t=286s peak=20.33GB
+10:15:02 full_s1235 step 151/250 loss 0.1647 avg20 0.1888 t=334s peak=20.33GB
+10:15:53 full_s1235 step 176/250 loss 0.0491 avg20 0.1960 t=384s peak=20.33GB
+10:16:44 full_s1235 step 201/250 loss 0.2483 avg20 0.1756 t=436s peak=20.33GB
+10:17:37 full_s1235 step 226/250 loss 0.1341 avg20 0.1826 t=488s peak=20.33GB
+10:18:24 full_s1235 step 250/250 loss 0.0612 avg20 0.1252 t=535s peak=20.33GB
+10:21:47 full_s1235 {'run': 'full_s1235', 'arm': 'full', 'seed': 1235, 'status': 'ok', 'lr': 1e-05, 'steps': 250, 'trainable_params': 4022468096, 'total_params': 4022468096, 'train_seconds': 535.4038372039795, 'peak_alloc_gb': 20.332675584, 'peak_reserved_gb': 22.41855488, 'final_train_loss_avg20': 0.1251506455242634, 'eval_accuracy': 0.9175, 'eval_loss': 0.21382233503359022, 'eval_seconds': 203.31162118911743}
+10:21:51 driver: launching lora_s1235
+10:22:01 model Qwen/Qwen3-4B label token ids [[4337], [13180], [8025], [40372, 16731, 4737]]
+10:22:10 lora_s1235: trainable 33030144 / 4055498240; mem after load 8.23 GB
+10:22:12 lora_s1235 step 1/250 loss 1.5686 avg20 1.5686 t=2s peak=8.98GB
+10:22:56 lora_s1235 step 26/250 loss 0.1087 avg20 0.3194 t=46s peak=9.95GB
+10:23:40 lora_s1235 step 51/250 loss 0.6082 avg20 0.2511 t=90s peak=9.95GB
+10:24:23 lora_s1235 step 76/250 loss 0.2847 avg20 0.2322 t=133s peak=9.95GB
+10:25:08 lora_s1235 step 101/250 loss 0.0897 avg20 0.1957 t=178s peak=9.95GB
+10:25:51 lora_s1235 step 126/250 loss 0.2310 avg20 0.2100 t=221s peak=9.95GB
+10:26:31 lora_s1235 step 151/250 loss 0.1606 avg20 0.1694 t=262s peak=9.95GB
+10:27:17 lora_s1235 step 176/250 loss 0.0456 avg20 0.2053 t=307s peak=9.95GB
+10:28:02 lora_s1235 step 201/250 loss 0.2385 avg20 0.1686 t=353s peak=9.95GB
+10:28:49 lora_s1235 step 226/250 loss 0.1501 avg20 0.1866 t=400s peak=9.95GB
+10:29:31 lora_s1235 step 250/250 loss 0.1200 avg20 0.1190 t=441s peak=9.95GB
+10:34:53 lora_s1235 {'run': 'lora_s1235', 'arm': 'lora', 'seed': 1235, 'status': 'ok', 'lr': 0.0002, 'steps': 250, 'trainable_params': 33030144, 'total_params': 4055498240, 'train_seconds': 440.81016087532043, 'peak_alloc_gb': 9.94868736, 'peak_reserved_gb': 10.586423296, 'final_train_loss_avg20': 0.1189574801363051, 'eval_accuracy': 0.914, 'eval_loss': 0.2234630593342008, 'eval_seconds': 322.4701225757599}
+10:34:55 driver: launching dora_s1235
+10:35:06 model Qwen/Qwen3-4B label token ids [[4337], [13180], [8025], [40372, 16731, 4737]]
+10:35:14 dora_s1235: trainable 34136064 / 4056604160; mem after load 8.25 GB
+10:35:19 dora_s1235 step 1/250 loss 1.6110 avg20 1.6110 t=4s peak=9.77GB
+10:37:13 dora_s1235 step 26/250 loss 0.0974 avg20 0.3650 t=119s peak=10.93GB
+10:39:06 dora_s1235 step 51/250 loss 0.6387 avg20 0.2827 t=232s peak=10.93GB
+10:40:59 dora_s1235 step 76/250 loss 0.1788 avg20 0.2182 t=344s peak=10.93GB
+10:42:54 dora_s1235 step 101/250 loss 0.0703 avg20 0.1857 t=459s peak=10.93GB
+10:44:47 dora_s1235 step 126/250 loss 0.2189 avg20 0.1991 t=572s peak=10.93GB
+10:46:35 dora_s1235 step 151/250 loss 0.1987 avg20 0.1652 t=681s peak=10.93GB
+10:48:31 dora_s1235 step 176/250 loss 0.0712 avg20 0.2075 t=796s peak=10.93GB
+10:50:28 dora_s1235 step 201/250 loss 0.1810 avg20 0.1660 t=914s peak=10.93GB
+10:52:27 dora_s1235 step 226/250 loss 0.1497 avg20 0.1855 t=1032s peak=10.93GB
+10:54:14 dora_s1235 step 250/250 loss 0.0911 avg20 0.1190 t=1140s peak=10.93GB
+11:04:02 dora_s1235 {'run': 'dora_s1235', 'arm': 'dora', 'seed': 1235, 'status': 'ok', 'lr': 0.0002, 'steps': 250, 'trainable_params': 34136064, 'total_params': 4056604160, 'train_seconds': 1139.7459223270416, 'peak_alloc_gb': 10.926994432, 'peak_reserved_gb': 11.630804992, 'final_train_loss_avg20': 0.11903473390266299, 'eval_accuracy': 0.9125, 'eval_loss': 0.22627649563434535, 'eval_seconds': 587.8269710540771}
+11:04:04 driver: launching qlora_s1235
+11:04:14 model Qwen/Qwen3-4B label token ids [[4337], [13180], [8025], [40372, 16731, 4737]]
+11:04:23 qlora_s1235: trainable 33030144 / 2238840320; mem after load 2.81 GB
+11:04:25 qlora_s1235 step 1/250 loss 2.8469 avg20 2.8469 t=2s peak=3.48GB
+11:05:10 qlora_s1235 step 26/250 loss 0.1923 avg20 0.4013 t=47s peak=4.33GB
+11:05:53 qlora_s1235 step 51/250 loss 0.5247 avg20 0.2587 t=90s peak=4.33GB
+11:06:37 qlora_s1235 step 76/250 loss 0.2109 avg20 0.2357 t=134s peak=4.33GB
+11:07:22 qlora_s1235 step 101/250 loss 0.0894 avg20 0.1958 t=179s peak=4.33GB
+11:08:05 qlora_s1235 step 126/250 loss 0.2206 avg20 0.2225 t=222s peak=4.33GB
+11:08:47 qlora_s1235 step 151/250 loss 0.2203 avg20 0.1667 t=263s peak=4.33GB
+11:09:32 qlora_s1235 step 176/250 loss 0.0346 avg20 0.1969 t=309s peak=4.33GB
+11:10:18 qlora_s1235 step 201/250 loss 0.2141 avg20 0.1655 t=354s peak=4.33GB
+11:11:05 qlora_s1235 step 226/250 loss 0.1269 avg20 0.1843 t=401s peak=4.33GB
+11:11:46 qlora_s1235 step 250/250 loss 0.1221 avg20 0.1151 t=443s peak=4.33GB
+11:16:50 qlora_s1235 {'run': 'qlora_s1235', 'arm': 'qlora', 'seed': 1235, 'status': 'ok', 'lr': 0.0002, 'steps': 250, 'trainable_params': 33030144, 'total_params': 2238840320, 'train_seconds': 442.6168200969696, 'peak_alloc_gb': 4.33422336, 'peak_reserved_gb': 4.871684096, 'final_train_loss_avg20': 0.11510793250054122, 'eval_accuracy': 0.9165, 'eval_loss': 0.2112416116538807, 'eval_seconds': 303.9252712726593}
+11:16:52 driver: launching full_s1236
+11:17:02 model Qwen/Qwen3-4B label token ids [[4337], [13180], [8025], [40372, 16731, 4737]]
+11:17:10 full_s1236: trainable 4022468096 / 4022468096; mem after load 8.10 GB
+11:17:16 full_s1236 step 1/250 loss 1.6455 avg20 1.6455 t=6s peak=20.35GB
+11:17:20 full_s1236 FAILED: OutOfMemoryError('CUDA out of memory. Tried to allocate 1.45 GiB. GPU 0 has a total capacity of 22.03 GiB of which 1.42 GiB is free. Including non-PyTorch memory, this process has 20.61 GiB memory in use. Of the allocated memory 17.46 GiB is allocated by PyTorch, and 2.92 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)')
+Traceback (most recent call last):
+  File "/content/train.py", line 166, in <module>
+    loss.backward()  # full FT: optimizer steps happen inside this call
+    ~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/_tensor.py", line 631, in backward
+    torch.autograd.backward(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        self, gradient, retain_graph, create_graph, inputs=inputs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/dist-packages/torch/autograd/__init__.py", line 381, in backward
+    _engine_run_backward(
+    ~~~~~~~~~~~~~~~~~~~~^
+        tensors,
+        ^^^^^^^^
+    ...<5 lines>...
+        accumulate_grad=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/dist-packages/torch/autograd/graph.py", line 869, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        t_outputs, *args, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )  # Calls into the C++ engine to run the backward pass
+    ^
+  File "/content/train.py", line 105, in hook
+    o.step(); o.zero_grad(set_to_none=True)
+    ~~~~~~^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/optim/optimizer.py", line 533, in wrapper
+    out = func(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/torchao/optim/adam.py", line 142, in step
+    torch.compile(single_param_adam, fullgraph=True, dynamic=False)(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        p.detach(),
+        ^^^^^^^^^^^
+    ...<11 lines>...
+        self.bf16_stochastic_round and p.dtype is torch.bfloat16,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/dist-packages/torch/_dynamo/eval_frame.py", line 1024, in compile_wrapper
+    return fn(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/torchao/optim/adam.py", line 163, in single_param_adam
+    def single_param_adam(
+  File "/usr/local/lib/python3.13/dist-packages/torch/_dynamo/eval_frame.py", line 1263, in _fn
+    return fn(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/torch/_functorch/aot_autograd.py", line 1200, in forward
+    return compiled_fn(full_args)
+  File "/usr/local/lib/python3.13/dist-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 2298, in __call__
+    return self.compiled_fn(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 580, in runtime_wrapper
+    all_outs = call_func_at_runtime_with_args(
+        compiled_fn, args, disable_amp=disable_amp, steal_args=True
+    )
+  File "/usr/local/lib/python3.13/dist-packages/torch/_functorch/_aot_autograd/utils.py", line 138, in call_func_at_runtime_with_args
+    out = normalize_as_list(f(args))
+                            ~^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 783, in wrapper
+    return compiled_fn(runtime_args)
+  File "/usr/local/lib/python3.13/dist-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 966, in inner_fn
+    unwrapped_outs = compiled_fn(unwrapped_args)
+  File "/usr/local/lib/python3.13/dist-packages/torch/_inductor/output_code.py", line 656, in __call__
+    return self.current_callable(inputs)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/_inductor/utils.py", line 3401, in run
+    out = model(new_inputs)
+  File "/tmp/torchinductor_root/io/ciowvwhm6agq222jheyxd2ludki3ixpk7gylhvngwqmgw2quc57d.py", line 836, in call
+    buf5 = empty_strided_cuda((1519360, 256), (256, 1), torch.float32)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.45 GiB. GPU 0 has a total capacity of 22.03 GiB of which 1.42 GiB is free. Including non-PyTorch memory, this process has 20.61 GiB memory in use. Of the allocated memory 17.46 GiB is allocated by PyTorch, and 2.92 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+
+11:17:22 driver: launching lora_s1236
+11:17:33 model Qwen/Qwen3-4B label token ids [[4337], [13180], [8025], [40372, 16731, 4737]]
+11:17:41 lora_s1236: trainable 33030144 / 4055498240; mem after load 8.23 GB
+11:17:43 lora_s1236 step 1/250 loss 1.6455 avg20 1.6455 t=2s peak=9.03GB
+11:18:28 lora_s1236 step 26/250 loss 0.2982 avg20 0.4595 t=46s peak=9.61GB
+11:19:14 lora_s1236 step 51/250 loss 0.3973 avg20 0.2929 t=93s peak=9.92GB
+11:19:58 lora_s1236 step 76/250 loss 0.0386 avg20 0.2782 t=137s peak=9.92GB
+11:20:44 lora_s1236 step 101/250 loss 0.6349 avg20 0.2552 t=183s peak=9.95GB
+11:21:27 lora_s1236 step 126/250 loss 0.1553 avg20 0.1978 t=225s peak=9.95GB
+RESUMED_FROM_FETCHED_RESULTS
+12:26:04 model Qwen/Qwen3-4B label token ids [[4337], [13180], [8025], [40372, 16731, 4737]]
+12:26:13 driver: launching full_s1236
+12:26:23 model Qwen/Qwen3-4B label token ids [[4337], [13180], [8025], [40372, 16731, 4737]]
+12:26:57 full_s1236: trainable 4022468096 / 4022468096; mem after load 8.04 GB
+12:27:36 full_s1236 step 1/250 loss 1.6455 avg20 1.6455 t=39s peak=20.21GB
+12:28:24 full_s1236 step 26/250 loss 0.2757 avg20 0.4090 t=87s peak=20.21GB
+12:29:15 full_s1236 step 51/250 loss 0.4475 avg20 0.2991 t=138s peak=20.21GB
+12:30:06 full_s1236 step 76/250 loss 0.0779 avg20 0.2465 t=189s peak=20.21GB
+12:30:58 full_s1236 step 101/250 loss 0.7959 avg20 0.2482 t=241s peak=20.21GB
+12:31:48 full_s1236 step 126/250 loss 0.1919 avg20 0.2002 t=291s peak=20.21GB
+12:32:37 full_s1236 step 151/250 loss 0.3642 avg20 0.1782 t=340s peak=20.21GB
+12:33:25 full_s1236 step 176/250 loss 0.1371 avg20 0.2146 t=388s peak=20.21GB
+12:34:18 full_s1236 step 201/250 loss 0.0635 avg20 0.1721 t=441s peak=20.21GB
+12:35:07 full_s1236 step 226/250 loss 0.1440 avg20 0.1418 t=490s peak=20.21GB
+12:35:56 full_s1236 step 250/250 loss 0.1408 avg20 0.2189 t=539s peak=20.21GB
+12:39:21 full_s1236 {'run': 'full_s1236', 'arm': 'full', 'seed': 1236, 'status': 'ok', 'lr': 1e-05, 'steps': 250, 'trainable_params': 4022468096, 'total_params': 4022468096, 'train_seconds': 538.8458623886108, 'peak_alloc_gb': 20.214809088, 'peak_reserved_gb': 22.225616896, 'final_train_loss_avg20': 0.21888476414605976, 'eval_accuracy': 0.916, 'eval_loss': 0.21047256557346555, 'eval_seconds': 204.81103038787842}
+12:39:27 driver: launching lora_s1236
+12:39:38 model Qwen/Qwen3-4B label token ids [[4337], [13180], [8025], [40372, 16731, 4737]]
+12:39:47 lora_s1236: trainable 33030144 / 4055498240; mem after load 8.18 GB
+12:39:49 lora_s1236 step 1/250 loss 1.6455 avg20 1.6455 t=2s peak=8.98GB
+12:40:33 lora_s1236 step 26/250 loss 0.2982 avg20 0.4595 t=46s peak=9.55GB
+12:41:19 lora_s1236 step 51/250 loss 0.3973 avg20 0.2929 t=92s peak=9.86GB
+12:42:02 lora_s1236 step 76/250 loss 0.0386 avg20 0.2782 t=136s peak=9.86GB
+12:42:48 lora_s1236 step 101/250 loss 0.6349 avg20 0.2552 t=181s peak=9.89GB
+12:43:30 lora_s1236 step 126/250 loss 0.1553 avg20 0.1978 t=224s peak=9.89GB
+12:44:12 lora_s1236 step 151/250 loss 0.3940 avg20 0.1737 t=266s peak=9.89GB
+12:44:53 lora_s1236 step 176/250 loss 0.1386 avg20 0.1895 t=307s peak=9.89GB
+12:45:40 lora_s1236 step 201/250 loss 0.0318 avg20 0.1523 t=353s peak=9.89GB
+12:46:22 lora_s1236 step 226/250 loss 0.1710 avg20 0.1477 t=395s peak=9.89GB
+12:47:04 lora_s1236 step 250/250 loss 0.1507 avg20 0.2244 t=438s peak=9.89GB
+12:52:25 lora_s1236 {'run': 'lora_s1236', 'arm': 'lora', 'seed': 1236, 'status': 'ok', 'lr': 0.0002, 'steps': 250, 'trainable_params': 33030144, 'total_params': 4055498240, 'train_seconds': 437.64658522605896, 'peak_alloc_gb': 9.887910912, 'peak_reserved_gb': 10.23410176, 'final_train_loss_avg20': 0.22435785727575422, 'eval_accuracy': 0.9135, 'eval_loss': 0.21267706356249982, 'eval_seconds': 320.85620379447937}
+12:52:27 driver: launching dora_s1236
+12:52:38 model Qwen/Qwen3-4B label token ids [[4337], [13180], [8025], [40372, 16731, 4737]]
+12:52:47 dora_s1236: trainable 34136064 / 4056604160; mem after load 8.19 GB
+12:52:51 dora_s1236 step 1/250 loss 1.6498 avg20 1.6498 t=4s peak=9.78GB
+12:54:45 dora_s1236 step 26/250 loss 0.2623 avg20 0.4504 t=118s peak=10.45GB
+12:56:43 dora_s1236 step 51/250 loss 0.3121 avg20 0.2816 t=236s peak=10.83GB
+12:58:36 dora_s1236 step 76/250 loss 0.0471 avg20 0.2607 t=349s peak=10.83GB
+13:00:33 dora_s1236 step 101/250 loss 0.6379 avg20 0.2728 t=467s peak=10.87GB
+13:02:25 dora_s1236 step 126/250 loss 0.1462 avg20 0.2070 t=578s peak=10.87GB
+13:04:15 dora_s1236 step 151/250 loss 0.3530 avg20 0.1651 t=689s peak=10.87GB
+13:06:04 dora_s1236 step 176/250 loss 0.1099 avg20 0.1880 t=797s peak=10.87GB
+13:08:02 dora_s1236 step 201/250 loss 0.0497 avg20 0.1535 t=916s peak=10.87GB
+13:09:54 dora_s1236 step 226/250 loss 0.1259 avg20 0.1370 t=1027s peak=10.87GB
+13:11:43 dora_s1236 step 250/250 loss 0.1004 avg20 0.2069 t=1136s peak=10.87GB
+13:21:29 dora_s1236 {'run': 'dora_s1236', 'arm': 'dora', 'seed': 1236, 'status': 'ok', 'lr': 0.0002, 'steps': 250, 'trainable_params': 34136064, 'total_params': 4056604160, 'train_seconds': 1136.4494280815125, 'peak_alloc_gb': 10.868519936, 'peak_reserved_gb': 11.339300864, 'final_train_loss_avg20': 0.20687549281865358, 'eval_accuracy': 0.914, 'eval_loss': 0.20380293415184134, 'eval_seconds': 585.9952893257141}
+13:21:31 driver: launching qlora_s1236
+13:21:42 model Qwen/Qwen3-4B label token ids [[4337], [13180], [8025], [40372, 16731, 4737]]
+13:21:51 qlora_s1236: trainable 33030144 / 2238840320; mem after load 2.79 GB
+13:21:53 qlora_s1236 step 1/250 loss 3.1667 avg20 3.1667 t=2s peak=3.50GB
+13:22:37 qlora_s1236 step 26/250 loss 0.4067 avg20 0.4874 t=46s peak=4.02GB
+13:23:23 qlora_s1236 step 51/250 loss 0.1313 avg20 0.3044 t=92s peak=4.28GB
+13:24:07 qlora_s1236 step 76/250 loss 0.0455 avg20 0.2732 t=136s peak=4.28GB
+13:24:53 qlora_s1236 step 101/250 loss 0.7166 avg20 0.2742 t=182s peak=4.30GB
+13:25:35 qlora_s1236 step 126/250 loss 0.2285 avg20 0.2289 t=224s peak=4.30GB
+13:26:17 qlora_s1236 step 151/250 loss 0.4130 avg20 0.1784 t=267s peak=4.30GB
+13:26:59 qlora_s1236 step 176/250 loss 0.1201 avg20 0.1815 t=308s peak=4.30GB
+13:27:45 qlora_s1236 step 201/250 loss 0.0268 avg20 0.1626 t=354s peak=4.30GB
+13:28:27 qlora_s1236 step 226/250 loss 0.1244 avg20 0.1550 t=397s peak=4.30GB
+13:29:09 qlora_s1236 step 250/250 loss 0.1288 avg20 0.2092 t=439s peak=4.30GB
+13:34:12 qlora_s1236 {'run': 'qlora_s1236', 'arm': 'qlora', 'seed': 1236, 'status': 'ok', 'lr': 0.0002, 'steps': 250, 'trainable_params': 33030144, 'total_params': 2238840320, 'train_seconds': 438.6350247859955, 'peak_alloc_gb': 4.301406208, 'peak_reserved_gb': 4.733272064, 'final_train_loss_avg20': 0.20917917415499687, 'eval_accuracy': 0.9125, 'eval_loss': 0.21574114220566115, 'eval_seconds': 302.51684737205505}
+13:34:14 DONE

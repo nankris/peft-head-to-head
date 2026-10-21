@@ -1,0 +1,76 @@
+== attempt 1 2026-10-17T05:39:40Z
+Current balance: 163.61 compute units
+Usage rate: 3.08/hr
+Active assignments: 2
+[colab] Creating session 'b6-101'...
+[colab] Allocation refused (precondition failed). This can mean too many active sessions, or a temporary usage or capacity limit for the requested runtime. Run `colab stop` to free up a session, wait and retry, or try a different accelerator.
+== attempt 2 2026-10-17T05:44:43Z
+Current balance: 163.35 compute units
+Usage rate: 3.08/hr
+Active assignments: 2
+[colab] Creating session 'b6-101'...
+[colab] Allocation refused (precondition failed). This can mean too many active sessions, or a temporary usage or capacity limit for the requested runtime. Run `colab stop` to free up a session, wait and retry, or try a different accelerator.
+== attempt 3 2026-10-17T05:49:45Z
+Current balance: 163.10 compute units
+Usage rate: 3.08/hr
+Active assignments: 2
+[colab] Creating session 'b6-101'...
+[colab] Allocation refused (precondition failed). This can mean too many active sessions, or a temporary usage or capacity limit for the requested runtime. Run `colab stop` to free up a session, wait and retry, or try a different accelerator.
+== attempt 4 2026-10-17T05:54:48Z
+Current balance: 162.84 compute units
+Usage rate: 3.08/hr
+Active assignments: 2
+[colab] Creating session 'b6-101'...
+[colab] Allocation refused (precondition failed). This can mean too many active sessions, or a temporary usage or capacity limit for the requested runtime. Run `colab stop` to free up a session, wait and retry, or try a different accelerator.
+== attempt 5 2026-10-17T05:59:50Z
+Current balance: 162.71 compute units
+Usage rate: 3.08/hr
+Active assignments: 2
+[colab] Creating session 'b6-101'...
+[colab] Allocation refused (precondition failed). This can mean too many active sessions, or a temporary usage or capacity limit for the requested runtime. Run `colab stop` to free up a session, wait and retry, or try a different accelerator.
+== attempt 6 2026-10-17T06:04:53Z
+Current balance: 162.45 compute units
+Usage rate: 3.08/hr
+Active assignments: 2
+[colab] Creating session 'b6-101'...
+[colab] Allocation refused (precondition failed). This can mean too many active sessions, or a temporary usage or capacity limit for the requested runtime. Run `colab stop` to free up a session, wait and retry, or try a different accelerator.
+== attempt 7 2026-10-17T06:09:58Z
+Current balance: 162.20 compute units
+Usage rate: 3.08/hr
+Active assignments: 2
+[colab] Creating session 'b6-101'...
+[colab] Allocation refused (precondition failed). This can mean too many active sessions, or a temporary usage or capacity limit for the requested runtime. Run `colab stop` to free up a session, wait and retry, or try a different accelerator.
+== attempt 8 2026-10-17T06:15:01Z
+Current balance: 161.94 compute units
+Usage rate: 3.08/hr
+Active assignments: 2
+[colab] Creating session 'b6-101'...
+[colab] Allocation refused (precondition failed). This can mean too many active sessions, or a temporary usage or capacity limit for the requested runtime. Run `colab stop` to free up a session, wait and retry, or try a different accelerator.
+== attempt (resume) 2026-10-17T06:57:02Z
+Current balance: 160.31 compute units
+Usage rate: 0.00/hr
+Active assignments: 0
+[colab] Creating session 'b6-101'...
+[colab] Session READY.
+== attempt (resume2) 2026-10-17T08:21:01Z — previous b6-101 VM vanished (server lists no sessions, usage 0/hr); last poll 07:33Z showed full_s1234 done, lora_s1234 at step 176; outputs not fetched, rerunning all
+Current balance: 157.38 compute units
+Usage rate: 1.54/hr
+Active assignments: 1
+[colab] Creating session 'b6-101'...
+[colab] Session READY.
+== attempt 1 2026-10-17T09:25:02Z
+Current balance: 154.42 compute units
+Usage rate: 0.00/hr
+Active assignments: 0
+[colab] Creating session 'b6-101'...
+[colab] Session READY.
+[b6-101] gpu-l4-s-kkb-ass1a0-1440gkkj87z2l | Hardware: L4 | Shape: Standard | Variant: GPU | Status: IDLE
+OK
+== attempt 1 2026-10-17T12:24:15Z
+Current balance: 145.97 compute units
+Usage rate: 1.54/hr
+Active assignments: 1
+[colab] Creating session 'b6-101'...
+[colab] Session READY.
+[b6-101] gpu-l4-s-kkb-ass1a0-3s0nm3w5omgxb | Hardware: L4 | Shape: Standard | Variant: GPU | Status: IDLE
+OK

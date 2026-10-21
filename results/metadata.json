@@ -1,0 +1,14 @@
+{
+  "gpu": "NVIDIA L4",
+  "model": "Qwen/Qwen3-4B",
+  "train_fingerprint": "eace0f1f458604fd",
+  "test_fingerprint": "5fc7a8cc6e27ae6d",
+  "versions": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.1",
+    "peft": "0.21.2",
+    "datasets": "5.1.0",
+    "bitsandbytes": "0.50.2",
+    "torchao": "0.18.0"
+  }
+}

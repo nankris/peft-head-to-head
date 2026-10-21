@@ -1,0 +1,209 @@
+== 2026-10-17T07:22:59Z
+
+07:22:23 full_s1234 step 201/250 loss 0.1539 avg20 0.1181 t=408s peak=20.33GB
+
+NVIDIA L4, 21575 MiB, 100 %
+== 2026-10-17T07:33:04Z
+07:27:26 full_s1234 {'run': 'full_s1234', 'arm': 'full', 'seed': 1234, 'status': 'ok', 'lr': 1e-05, 'steps': 250, 'trainable_params': 4022468096, 'total_params': 4022468096, 'train_seconds': 504.86942744255066, 'peak_alloc_gb': 20.332658688, 'peak_reserved_gb': 22.359834624, 'final_train_loss_avg20'
+07:33:00 lora_s1234 step 176/250 loss 0.1213 avg20 0.1756 t=312s peak=9.95GB
+
+NVIDIA L4, 10306 MiB, 100 %
+== 2026-10-17T08:22:10Z
+NVIDIA L4, 3 MiB, 0 %
+== 2026-10-17T08:27:27Z
+08:27:24 full_s1234 step 1/250 loss 3.4298 avg20 3.4298 t=37s peak=20.33GB
+
+NVIDIA L4, 21637 MiB, 100 %
+== 2026-10-17T08:32:51Z
+08:32:33 full_s1234 step 151/250 loss 0.1071 avg20 0.1631 t=346s peak=20.33GB
+
+NVIDIA L4, 21639 MiB, 100 %
+== 2026-10-17T08:38:04Z
+08:35:55 full_s1234 step 250/250 loss 0.4014 avg20 0.2204 t=548s peak=20.33GB
+
+NVIDIA L4, 21639 MiB, 100 %
+== 2026-10-17T08:43:12Z
+08:42:41 lora_s1234 step 101/250 loss 0.3977 avg20 0.2377 t=177s peak=9.95GB
+
+NVIDIA L4, 10306 MiB, 100 %
+== 2026-10-17T08:48:21Z
+08:47:07 lora_s1234 step 250/250 loss 0.4778 avg20 0.2130 t=443s peak=9.95GB
+
+NVIDIA L4, 12988 MiB, 100 %
+== 2026-10-17T08:53:41Z
+08:52:55 dora_s1234 step 1/250 loss 3.4630 avg20 3.4630 t=4s peak=9.77GB
+
+NVIDIA L4, 11158 MiB, 100 %
+== 2026-10-17T08:58:58Z
+08:58:39 dora_s1234 step 76/250 loss 0.1690 avg20 0.2409 t=348s peak=10.93GB
+
+NVIDIA L4, 11340 MiB, 100 %
+== 2026-10-17T09:26:47Z
+RESUMED_FROM_FETCHED_RESULTS
+
+NVIDIA L4, 3 MiB, 0 %
+== 2026-10-17T09:32:30Z
+│   1076 │   │   │   │   │   timeout = max(0, deadline - time.monotonic())     │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RuntimeError: Connection was lost.
+== 2026-10-17T09:35:49Z
+09:35:14 dora_s1234 step 101/250 loss 0.3612 avg20 0.2308 t=455s peak=10.93GB
+
+NVIDIA L4, 11340 MiB, 100 %
+== 2026-10-17T09:40:55Z
+│   1076 │   │   │   │   │   timeout = max(0, deadline - time.monotonic())     │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RuntimeError: Connection was lost.
+== 2026-10-17T09:44:24Z
+09:42:54 dora_s1234 step 201/250 loss 0.1707 avg20 0.1193 t=915s peak=10.93GB
+
+NVIDIA L4, 11340 MiB, 100 %
+== 2026-10-17T09:57:04Z
+09:56:47 qlora_s1234 step 1/250 loss 4.6127 avg20 4.6127 t=2s peak=3.48GB
+
+NVIDIA L4, 4902 MiB, 94 %
+== 2026-10-17T10:00:24Z
+09:59:41 qlora_s1234 step 101/250 loss 0.4279 avg20 0.2227 t=176s peak=4.33GB
+
+NVIDIA L4, 5136 MiB, 100 %
+== 2026-10-17T10:03:42Z
+10:03:23 qlora_s1234 step 226/250 loss 0.1767 avg20 0.1999 t=398s peak=4.33GB
+
+NVIDIA L4, 5136 MiB, 100 %
+== 2026-10-17T10:07:15Z
+10:04:04 qlora_s1234 step 250/250 loss 0.4436 avg20 0.2201 t=439s peak=4.33GB
+
+NVIDIA L4, 8204 MiB, 100 %
+== 2026-10-17T10:12:40Z
+10:12:34 full_s1235 step 76/250 loss 0.1487 avg20 0.1999 t=186s peak=20.33GB
+
+NVIDIA L4, 21639 MiB, 100 %
+== 2026-10-17T10:17:55Z
+│   1076 │   │   │   │   │   timeout = max(0, deadline - time.monotonic())     │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RuntimeError: Connection was lost.
+== 2026-10-17T10:21:25Z
+10:18:24 full_s1235 step 250/250 loss 0.0612 avg20 0.1252 t=535s peak=20.33GB
+
+NVIDIA L4, 21639 MiB, 100 %
+== 2026-10-17T10:26:43Z
+│   1076 │   │   │   │   │   timeout = max(0, deadline - time.monotonic())     │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RuntimeError: Connection was lost.
+== 2026-10-17T10:30:40Z
+10:29:31 lora_s1235 step 250/250 loss 0.1200 avg20 0.1190 t=441s peak=9.95GB
+
+NVIDIA L4, 13028 MiB, 100 %
+== 2026-10-17T10:53:36Z
+10:52:27 dora_s1235 step 226/250 loss 0.1497 avg20 0.1855 t=1032s peak=10.93GB
+
+NVIDIA L4, 11342 MiB, 100 %
+== 2026-10-17T10:56:59Z
+10:54:14 dora_s1235 step 250/250 loss 0.0911 avg20 0.1190 t=1140s peak=10.93GB
+
+NVIDIA L4, 12710 MiB, 100 %
+== 2026-10-17T11:00:10Z
+10:54:14 dora_s1235 step 250/250 loss 0.0911 avg20 0.1190 t=1140s peak=10.93GB
+
+NVIDIA L4, 12710 MiB, 100 %
+== 2026-10-17T11:03:47Z
+10:54:14 dora_s1235 step 250/250 loss 0.0911 avg20 0.1190 t=1140s peak=10.93GB
+
+NVIDIA L4, 12710 MiB, 100 %
+== 2026-10-17T11:07:00Z
+11:06:37 qlora_s1235 step 76/250 loss 0.2109 avg20 0.2357 t=134s peak=4.33GB
+
+NVIDIA L4, 4896 MiB, 100 %
+== 2026-10-17T11:10:29Z
+11:10:18 qlora_s1235 step 201/250 loss 0.2141 avg20 0.1655 t=354s peak=4.33GB
+
+NVIDIA L4, 4896 MiB, 100 %
+== 2026-10-17T11:13:39Z
+11:11:46 qlora_s1235 step 250/250 loss 0.1221 avg20 0.1151 t=443s peak=4.33GB
+
+NVIDIA L4, 7964 MiB, 100 %
+== 2026-10-17T11:21:57Z
+11:21:27 lora_s1236 step 126/250 loss 0.1553 avg20 0.1978 t=225s peak=9.95GB
+
+NVIDIA L4, 10444 MiB, 100 %
+== 2026-10-17T12:27:41Z
+│   1076 │   │   │   │   │   timeout = max(0, deadline - time.monotonic())     │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RuntimeError: Connection was lost.
+== 2026-10-17T12:31:06Z
+12:30:58 full_s1236 step 101/250 loss 0.7959 avg20 0.2482 t=241s peak=20.21GB
+
+NVIDIA L4, 21455 MiB, 100 %
+== 2026-10-17T12:34:33Z
+12:34:18 full_s1236 step 201/250 loss 0.0635 avg20 0.1721 t=441s peak=20.21GB
+
+NVIDIA L4, 21455 MiB, 100 %
+== 2026-10-17T12:39:43Z
+12:39:27 driver: launching lora_s1236
+
+NVIDIA L4, 3 MiB, 0 %
+== 2026-10-17T12:43:05Z
+12:42:48 lora_s1236 step 101/250 loss 0.6349 avg20 0.2552 t=181s peak=9.89GB
+
+NVIDIA L4, 10010 MiB, 100 %
+== 2026-10-17T12:46:37Z
+12:46:22 lora_s1236 step 226/250 loss 0.1710 avg20 0.1477 t=395s peak=9.89GB
+
+NVIDIA L4, 10010 MiB, 100 %
+== 2026-10-17T12:49:48Z
+12:47:04 lora_s1236 step 250/250 loss 0.1507 avg20 0.2244 t=438s peak=9.89GB
+
+NVIDIA L4, 10050 MiB, 100 %
+== 2026-10-17T12:53:07Z
+12:52:51 dora_s1236 step 1/250 loss 1.6498 avg20 1.6498 t=4s peak=9.78GB
+
+NVIDIA L4, 10304 MiB, 100 %
+== 2026-10-17T12:56:17Z
+12:54:45 dora_s1236 step 26/250 loss 0.2623 avg20 0.4504 t=118s peak=10.45GB
+
+NVIDIA L4, 11004 MiB, 100 %
+== 2026-10-17T12:59:39Z
+12:58:36 dora_s1236 step 76/250 loss 0.0471 avg20 0.2607 t=349s peak=10.83GB
+
+NVIDIA L4, 11064 MiB, 100 %
+== 2026-10-17T13:03:13Z
+13:02:25 dora_s1236 step 126/250 loss 0.1462 avg20 0.2070 t=578s peak=10.87GB
+
+NVIDIA L4, 11064 MiB, 100 %
+== 2026-10-17T13:08:49Z
+13:08:02 dora_s1236 step 201/250 loss 0.0497 avg20 0.1535 t=916s peak=10.87GB
+
+NVIDIA L4, 11064 MiB, 100 %
+== 2026-10-17T13:12:14Z
+13:11:43 dora_s1236 step 250/250 loss 0.1004 avg20 0.2069 t=1136s peak=10.87GB
+
+NVIDIA L4, 11444 MiB, 100 %
+== 2026-10-17T13:15:41Z
+13:11:43 dora_s1236 step 250/250 loss 0.1004 avg20 0.2069 t=1136s peak=10.87GB
+
+NVIDIA L4, 11444 MiB, 100 %
+== 2026-10-17T13:19:07Z
+13:11:43 dora_s1236 step 250/250 loss 0.1004 avg20 0.2069 t=1136s peak=10.87GB
+
+NVIDIA L4, 11444 MiB, 100 %
+== 2026-10-17T13:22:19Z
+13:21:53 qlora_s1236 step 1/250 loss 3.1667 avg20 3.1667 t=2s peak=3.50GB
+
+NVIDIA L4, 4444 MiB, 100 %
+== 2026-10-17T13:25:41Z
+13:25:35 qlora_s1236 step 126/250 loss 0.2285 avg20 0.2289 t=224s peak=4.30GB
+
+NVIDIA L4, 4764 MiB, 100 %
+== 2026-10-17T13:29:04Z
+13:28:27 qlora_s1236 step 226/250 loss 0.1244 avg20 0.1550 t=397s peak=4.30GB
+
+NVIDIA L4, 4764 MiB, 100 %
+== 2026-10-17T13:32:29Z
+13:29:09 qlora_s1236 step 250/250 loss 0.1288 avg20 0.2092 t=439s peak=4.30GB
+
+NVIDIA L4, 4844 MiB, 100 %
+== 2026-10-17T13:36:11Z
+13:34:14 DONE
+
+NVIDIA L4, 3 MiB, 0 %
+DONE

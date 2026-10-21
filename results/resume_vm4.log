@@ -1,0 +1,24 @@
+[colab] Uploaded '/tmp/tmp.Ikii677CRU/seed.tgz' to '/content/seed.tgz'
+[colab] Uploaded '/workspace/work/tig/101-peft-head-to-head/scripts/train.py' to '/content/train.py'
+loss_dora_s1234.json
+loss_dora_s1235.json
+loss_full_s1234.json
+loss_full_s1235.json
+loss_lora_s1234.json
+loss_lora_s1235.json
+loss_qlora_s1234.json
+loss_qlora_s1235.json
+pred_dora_s1234.json
+pred_dora_s1235.json
+pred_full_s1234.json
+pred_full_s1235.json
+pred_lora_s1234.json
+pred_lora_s1235.json
+pred_qlora_s1234.json
+pred_qlora_s1235.json
+pred_zero_shot.json
+progress.log
+runs.json
+
+launched
+resumed

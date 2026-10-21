@@ -1,0 +1,220 @@
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.pZLUrvztnl/out101.tgz'
+cp: cannot stat '/tmp/tmp.pZLUrvztnl/out101/*': No such file or directory
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.iSHljrcvQ7/out101.tgz'
+fetched 6 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.65RySNvArf/out101.tgz'
+fetched 6 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.vYEyxs66qe/out101.tgz'
+fetched 6 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.zXzKga01tZ/out101.tgz'
+fetched 8 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.f1uOH6x05y/out101.tgz'
+fetched 8 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.uz31mS8WFh/out101.tgz'
+fetched 10 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.TVvdLdHHyD/out101.tgz'
+fetched 10 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.VyJL4BNRtZ/out101.tgz'
+fetched 9 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.VR7CAyxG2G/out101.tgz'
+fetched 10 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.dKjpZdmvyd/out101.tgz'
+fetched 10 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.62fg5WD6RT/out101.tgz'
+fetched 10 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.Qhq3kgIsd5/out101.tgz'
+fetched 10 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.OEP4ujj0xo/out101.tgz'
+fetched 12 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.jQUhMbha9J/out101.tgz'
+fetched 12 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.wbj1h9ES1n/out101.tgz'
+fetched 12 files
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /workspace/tools/uv-tools/google-colab-cli/lib/python3.12/site-packages/cola │
+│ b_cli/commands/execution.py:227 in exec_command                              │
+│                                                                              │
+│   224 │   │   │   )                                                          │
+│   225 │   │   │   state.prune_session(name)                                  │
+│   226 │   │   │   raise typer.Exit(1)                                        │
+│ ❱ 227 │   │   raise e                                                        │
+│   228 │                                                                      │
+│   229 │   try:                                                               │
+│   230 │   │   is_nb = file and file.endswith(".ipynb")                       │
+│                                                                              │
+│ /workspace/tools/uv-tools/google-colab-cli/lib/python3.12/site-packages/cola │
+│ b_cli/commands/execution.py:217 in exec_command                              │
+│                                                                              │
+│   214 │   )                                                                  │
+│   215 │   try:                                                               │
+│   216 │   │   # Ensure we are in /content which is the standard Colab        │
+│       working directory                                                      │
+│ ❱ 217 │   │   runtime.execute_code(                                          │
+│   218 │   │   │   "import os; os.makedirs('/content', exist_ok=True);        │
+│       os.chdir('/content')"                                                  │
+│   219 │   │   )                                                              │
+│   220 │   except Exception as e:                                             │
+│                                                                              │
+│ /workspace/tools/uv-tools/google-colab-cli/lib/python3.12/site-packages/cola │
+│ b_cli/runtime.py:243 in execute_code                                         │
+│                                                                              │
+│   240 │   │   │   # execute_interactive returns the raw reply message        │
+│   241 │   │   │   reply_content = reply["content"] if reply else {"status":  │
+│       "error"}                                                               │
+│   242 │   │   else:                                                          │
+│ ❱ 243 │   │   │   reply = self.kernel_client.execute(code, **kwargs)         │
+│   244 │   │   │   if not reply:                                              │
+│   245 │   │   │   │   return []                                              │
+│   246 │   │   │   outputs = reply.get("outputs", [])                         │
+│                                                                              │
+│ /workspace/tools/uv-tools/google-colab-cli/lib/python3.12/site-packages/jupy │
+│ ter_kernel_client/client.py:287 in execute                                   │
+│                                                                              │
+│   284 │   │   """                                                            │
+│   285 │   │   outputs = []                                                   │
+│   286 │   │   self._set_variables(variables)                                 │
+│ ❱ 287 │   │   reply = self._manager.client.execute_interactive(              │
+│   288 │   │   │   code,                                                      │
+│   289 │   │   │   silent=silent,                                             │
+│   290 │   │   │   store_history=store_history,                               │
+│                                                                              │
+│ /workspace/tools/uv-tools/google-colab-cli/lib/python3.12/site-packages/jupy │
+│ ter_kernel_client/wsclient.py:1073 in execute_interactive                    │
+│                                                                              │
+│   1070 │   │   │   # wait for output and redisplay it                        │
+│   1071 │   │   │   while True:                                               │
+│   1072 │   │   │   │   if not self.connection_ready.is_set():                │
+│ ❱ 1073 │   │   │   │   │   raise RuntimeError("Connection was lost.")        │
+│   1074 │   │   │   │                                                         │
+│   1075 │   │   │   │   if timeout is not None:                               │
+│   1076 │   │   │   │   │   timeout = max(0, deadline - time.monotonic())     │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RuntimeError: Connection was lost.
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.rqP3p5ikQU/out101.tgz'
+fetched 14 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.3c2wGds4yE/out101.tgz'
+fetched 14 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.3PI2Q1Ahf2/out101.tgz'
+fetched 14 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.BWYghFeiOi/out101.tgz'
+fetched 14 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.hmI5n8CoCx/out101.tgz'
+fetched 16 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.RkanC9gZWL/out101.tgz'
+fetched 16 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.4Vb8LvsdLL/out101.tgz'
+fetched 18 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.y2ouakI9KQ/out101.tgz'
+fetched 18 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.eaIdkeyODO/out101.tgz'
+fetched 18 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.fzDq3xYbQp/out101.tgz'
+fetched 18 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.kKFnbUFDE4/out101.tgz'
+fetched 20 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.ggDWaVkKZO/out101.tgz'
+fetched 20 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.pPbxvkwnXQ/out101.tgz'
+fetched 20 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.JfHKtJupkA/out101.tgz'
+fetched 22 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.Z30dGi81Ui/out101.tgz'
+fetched 22 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.LJj4Tzl2hH/out101.tgz'
+fetched 22 files
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /workspace/tools/uv-tools/google-colab-cli/lib/python3.12/site-packages/cola │
+│ b_cli/commands/execution.py:227 in exec_command                              │
+│                                                                              │
+│   224 │   │   │   )                                                          │
+│   225 │   │   │   state.prune_session(name)                                  │
+│   226 │   │   │   raise typer.Exit(1)                                        │
+│ ❱ 227 │   │   raise e                                                        │
+│   228 │                                                                      │
+│   229 │   try:                                                               │
+│   230 │   │   is_nb = file and file.endswith(".ipynb")                       │
+│                                                                              │
+│ /workspace/tools/uv-tools/google-colab-cli/lib/python3.12/site-packages/cola │
+│ b_cli/commands/execution.py:217 in exec_command                              │
+│                                                                              │
+│   214 │   )                                                                  │
+│   215 │   try:                                                               │
+│   216 │   │   # Ensure we are in /content which is the standard Colab        │
+│       working directory                                                      │
+│ ❱ 217 │   │   runtime.execute_code(                                          │
+│   218 │   │   │   "import os; os.makedirs('/content', exist_ok=True);        │
+│       os.chdir('/content')"                                                  │
+│   219 │   │   )                                                              │
+│   220 │   except Exception as e:                                             │
+│                                                                              │
+│ /workspace/tools/uv-tools/google-colab-cli/lib/python3.12/site-packages/cola │
+│ b_cli/runtime.py:243 in execute_code                                         │
+│                                                                              │
+│   240 │   │   │   # execute_interactive returns the raw reply message        │
+│   241 │   │   │   reply_content = reply["content"] if reply else {"status":  │
+│       "error"}                                                               │
+│   242 │   │   else:                                                          │
+│ ❱ 243 │   │   │   reply = self.kernel_client.execute(code, **kwargs)         │
+│   244 │   │   │   if not reply:                                              │
+│   245 │   │   │   │   return []                                              │
+│   246 │   │   │   outputs = reply.get("outputs", [])                         │
+│                                                                              │
+│ /workspace/tools/uv-tools/google-colab-cli/lib/python3.12/site-packages/jupy │
+│ ter_kernel_client/client.py:287 in execute                                   │
+│                                                                              │
+│   284 │   │   """                                                            │
+│   285 │   │   outputs = []                                                   │
+│   286 │   │   self._set_variables(variables)                                 │
+│ ❱ 287 │   │   reply = self._manager.client.execute_interactive(              │
+│   288 │   │   │   code,                                                      │
+│   289 │   │   │   silent=silent,                                             │
+│   290 │   │   │   store_history=store_history,                               │
+│                                                                              │
+│ /workspace/tools/uv-tools/google-colab-cli/lib/python3.12/site-packages/jupy │
+│ ter_kernel_client/wsclient.py:1073 in execute_interactive                    │
+│                                                                              │
+│   1070 │   │   │   # wait for output and redisplay it                        │
+│   1071 │   │   │   while True:                                               │
+│   1072 │   │   │   │   if not self.connection_ready.is_set():                │
+│ ❱ 1073 │   │   │   │   │   raise RuntimeError("Connection was lost.")        │
+│   1074 │   │   │   │                                                         │
+│   1075 │   │   │   │   if timeout is not None:                               │
+│   1076 │   │   │   │   │   timeout = max(0, deadline - time.monotonic())     │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RuntimeError: Connection was lost.
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.dwlQUfiXrs/out101.tgz'
+fetched 22 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.gmwXtGt97w/out101.tgz'
+fetched 24 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.tm5cqLL3w1/out101.tgz'
+fetched 24 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.2quXftAgjO/out101.tgz'
+fetched 24 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.L1KFbvtCq2/out101.tgz'
+fetched 24 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.7dMlPLz4zS/out101.tgz'
+fetched 26 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.oBa7dKCdam/out101.tgz'
+fetched 26 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.u6GawEr1hV/out101.tgz'
+fetched 26 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.KpCaXOMInY/out101.tgz'
+fetched 26 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.2egec17Xm1/out101.tgz'
+fetched 26 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.yyzZfbD5In/out101.tgz'
+fetched 26 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.M7gSN5L3nz/out101.tgz'
+fetched 26 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.hF89VyRjBn/out101.tgz'
+fetched 26 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.ZRB301x1uM/out101.tgz'
+fetched 28 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.2rekv24Ecs/out101.tgz'
+fetched 28 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.2crU6mieZU/out101.tgz'
+fetched 28 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.0V3ccMuP6y/out101.tgz'
+fetched 28 files
+[colab] Downloaded '/content/out101.tgz' to '/tmp/tmp.PFoIByeLOG/out101.tgz'
+fetched 31 files

@@ -1,0 +1,145 @@
+{
+  "seeds": [
+    1234,
+    1235,
+    1236
+  ],
+  "zero_shot_acc": 73.3,
+  "cu_per_hour": 1.54,
+  "H1": {
+    "diff": -0.10000000000002274,
+    "ci": [
+      -0.4666666666666597,
+      0.30000000000000027
+    ],
+    "verdict": "inconclusive"
+  },
+  "H2": {
+    "diff": 0.0999999999999801,
+    "ci": [
+      -0.34999999999999504,
+      0.5499999999999949
+    ],
+    "vram_ratio": 0.4354123768637681,
+    "verdict": "supported"
+  },
+  "overall": "INCONCLUSIVE",
+  "extra": {
+    "full_minus_lora": {
+      "diff": 0.2666666666666515,
+      "ci": [
+        -0.216666666666665,
+        0.766666666666671
+      ]
+    },
+    "dora_minus_qlora": {
+      "diff": -0.20000000000000284,
+      "ci": [
+        -0.7000000000000006,
+        0.3333333333333302
+      ]
+    }
+  },
+  "best_gain_per_gpu_min": "qlora",
+  "rows": [
+    {
+      "arm": "lora",
+      "method": "LoRA r16",
+      "n_seeds": 3,
+      "acc_mean": 91.48333333333335,
+      "acc_sd": 0.1892969448600115,
+      "acc_ci_lo": 90.26666666666667,
+      "acc_ci_hi": 92.7,
+      "eval_loss": 0.2181560514900678,
+      "trainable_params": 33030144,
+      "trainable_pct": 0.8144534171959104,
+      "peak_alloc_gb": 9.927666688,
+      "peak_reserved_gb": 10.455001770666668,
+      "train_min": 7.342009558942583,
+      "eval_min": 5.380358760886722,
+      "train_cu": 0.18844491201285965,
+      "gain_pts_per_gpu_min": 2.4765846499623514,
+      "final_train_loss": 0.18542912531023226,
+      "gain_per_min_ci": [
+        2.2296877798966355,
+        2.7307328907787345
+      ]
+    },
+    {
+      "arm": "dora",
+      "method": "DoRA r16",
+      "n_seeds": 3,
+      "acc_mean": 91.38333333333333,
+      "acc_sd": 0.12583057392117952,
+      "acc_ci_lo": 90.2,
+      "acc_ci_hi": 92.56666666666666,
+      "eval_loss": 0.21430013244678656,
+      "trainable_params": 34136064,
+      "trainable_pct": 0.8414935905405175,
+      "peak_alloc_gb": 10.907978069333334,
+      "peak_reserved_gb": 11.532937898666667,
+      "train_min": 18.94578514761395,
+      "eval_min": 9.786055966218312,
+      "train_cu": 0.4862751521220914,
+      "gain_pts_per_gpu_min": 0.9544930749863251,
+      "final_train_loss": 0.18071864830950898,
+      "gain_per_min_ci": [
+        0.8580848538528091,
+        1.0513830952576095
+      ]
+    },
+    {
+      "arm": "qlora",
+      "method": "QLoRA 4-bit r16",
+      "n_seeds": 3,
+      "acc_mean": 91.58333333333333,
+      "acc_sd": 0.3055050463303859,
+      "acc_ci_lo": 90.35,
+      "acc_ci_hi": 92.75,
+      "eval_loss": 0.2133631612258032,
+      "trainable_params": 33030144,
+      "trainable_pct": 0.8144534171959104,
+      "peak_alloc_gb": 4.322628949333333,
+      "peak_reserved_gb": 4.909432832,
+      "train_min": 7.3372044788466555,
+      "eval_min": 5.057818574375577,
+      "train_cu": 0.18832158162373083,
+      "gain_pts_per_gpu_min": 2.4918545213797683,
+      "final_train_loss": 0.18144744414215286,
+      "gain_per_min_ci": [
+        2.240991167266249,
+        2.7440167464520426
+      ]
+    },
+    {
+      "arm": "full",
+      "method": "Full fine-tune",
+      "n_seeds": 3,
+      "acc_mean": 91.75,
+      "acc_sd": 0.14999999999999858,
+      "acc_ci_lo": 90.58333333333334,
+      "acc_ci_hi": 92.9,
+      "eval_loss": 0.2099145326586537,
+      "trainable_params": 4022468096,
+      "trainable_pct": 100.0,
+      "peak_alloc_gb": 20.293386752,
+      "peak_reserved_gb": 22.354242218666666,
+      "train_min": 9.014866336186726,
+      "eval_min": 3.420015539063348,
+      "train_cu": 0.23138156929545928,
+      "gain_pts_per_gpu_min": 2.046733406630635,
+      "final_train_loss": 0.18815371558691063,
+      "gain_per_min_ci": [
+        1.8399040006534249,
+        2.2498095660304993
+      ]
+    }
+  ],
+  "eff_qlora_minus_lora": {
+    "diff": 0.01526987141741687,
+    "ci": [
+      -0.04926241303173816,
+      0.07717412415499819
+    ]
+  }
+}
