@@ -1,8 +1,8 @@
-# #101 PEFT methods head-to-head on one L4 (Qwen3-4B, AG News)
+# PEFT methods head-to-head on one L4 (Qwen3-4B, AG News)
 
 **Status:** preregistered 2026-10-17, before any training run. **Finished 2026-10-17: INCONCLUSIVE** (H1 inconclusive, H2 supported). See `writeup.md`.
 
-**GPU / CU used:** NVIDIA L4 on Colab (1.54 CU/h). Kept runs: 3.37 GPU-h ≈ 5.2 CU. Total billed across 4 VMs (3 lost to sandbox reboots): ≈ 6.8–10.2 CU (`results/compute.json`).
+**GPU / CU used:** NVIDIA L4 on Colab (1.54 CU/h). Kept runs: 3.37 GPU-h ≈ 5.2 CU. Total billed across 4 VMs (3 lost to restarts of the local monitoring machine): ≈ 6.8–10.2 CU (`results/compute.json`).
 
 ## Question
 If you fine-tune a 4B model on one 24 GB L4, which method should you pick: LoRA, DoRA, QLoRA (4-bit) or a full fine-tune?
@@ -14,7 +14,7 @@ We compare accuracy and cost (VRAM, wall-clock, compute units).
 
 ## Setup (fixed in advance)
 - **Model:** `Qwen/Qwen3-4B` (public HF). We only fall back to Qwen3-1.7B if the full fine-tune cannot run on L4 or A100.
-- **Data:** the 038r protocol (reused from `../038r-lora-rank-seeds/scripts/train.py`). AG News (`fancyzhx/ag_news`),
+- **Data:** the protocol from my [LoRA rank sweep](https://github.com/nankris/lora-rank-sweep). AG News (`fancyzhx/ag_news`),
   4,000 training items and 2,000 test items, both shuffled with data seed 1234. Same prompt, max length 192, and labels
   ` World` / ` Sports` / ` Business` / ` Sci/Tech`. Loss is computed on the answer tokens only.
 - **Eval:** the predicted label is the argmax of the summed log-probs of the 4 label strings. Eval loss is the mean per-token
@@ -38,7 +38,7 @@ We compare accuracy and cost (VRAM, wall-clock, compute units).
   leaves complete seeds.
 - **Logged per run:** test accuracy, eval loss, trainable params, peak VRAM (`torch.cuda.max_memory_allocated` and
   `max_memory_reserved` during training), training wall-clock, eval wall-clock, and all 2,000 predictions.
-- **Hardware:** one Colab L4 (session `b6-101`). CU per arm = training GPU-hours × the measured session CU/hour rate.
+- **Hardware:** one Colab L4 (session `peft-head-to-head`). CU per arm = training GPU-hours × the measured session CU/hour rate.
 
 ## Decision rule (fixed)
 The CIs are 95% two-level paired bootstrap CIs (10,000 draws). Each draw resamples seeds with replacement (the same seeds for
@@ -57,20 +57,20 @@ over those seeds × items, in percentage points.
   optimizer caches, was not freed in-process, so the next arms ran out of memory. Fix: `train.py` now acts as a driver that runs
   every (arm, seed) in a fresh subprocess. Training/eval protocol unchanged; peak VRAM now starts from zero for every run.
 - The session slot was obtained 2026-10-17 06:57 UTC after ~1h of retries (account at its 2-session limit).
-- That first VM disappeared between 07:33 and 08:20 UTC. The sandbox had rebooted and killed the local poller, and the VM
+- That first VM disappeared between 07:33 and 08:20 UTC. The local monitoring machine had restarted and stopped the poller, and the VM
   most likely idled out. Its outputs (full_s1234 finished, lora_s1234 partway) were never fetched, so they are discarded
-  unseen. A new `b6-101` L4 VM was started at 08:20 UTC and all runs restarted from scratch with the same code.
+  unseen. A new `peft-head-to-head` L4 VM was started at 08:20 UTC and all runs restarted from scratch with the same code.
   `scripts/keepalive_fetch.sh` now polls and fetches every 5 min. CU for the lost VM (~1.54 CU/h × ~1.4 h) counts toward the total.
-- VM2 was also lost (last fetch 08:59 UTC; gone by 09:24 UTC) after another sandbox reboot. Runs already fetched (zero_shot,
+- VM2 was also lost (last fetch 08:59 UTC; gone by 09:24 UTC) after another restart of the local monitoring machine. Runs already fetched (zero_shot,
   full_s1234, lora_s1234) are kept. dora_s1234 was partway (step 76) and is discarded. `scripts/resume_vm.sh` started VM3 at
-  09:25 UTC with the same package versions. It re-seeds `/content/out101` with the fetched runs so `train.py` skips them, then
+  09:25 UTC with the same package versions. It re-seeds the remote results directory with the fetched runs so `train.py` skips them, then
   continues with identical code. Wall-clock is still comparable across VMs because every one was an L4 at the same
   1.54 CU/h, but VM-to-VM speed variance is a caveat.
 - full_s1236 hit a CUDA OOM at step 1 (11:17 UTC). The allocator reported 2.9 GB reserved-but-unallocated, i.e. fragmentation:
   the 20.3 GB peak is the same as the other full-FT seeds. Once every other run finished, the driver ran once more with
   `PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True` (`scripts/chain_retry_full.py`) to retry just that run. This changes only
   the allocator, not the training math. The failed attempt stays in `runs.json` as `status: failed`.
-- VM3 was lost too, after another sandbox reboot (last fetch 11:22 UTC, with lora_s1236 at step 126, which is discarded).
+- VM3 was lost too, after another restart of the local monitoring machine (last fetch 11:22 UTC, with lora_s1236 at step 126, which is discarded).
   `scripts/resume_vm.sh` started VM4 at 12:24 UTC with `LAUNCH=launch_expseg.py`, i.e. with `expandable_segments` for the
   remaining runs (full_s1236, lora_s1236, dora_s1236, qlora_s1236). It was re-seeded with all fetched runs. Allocator-only change.
 

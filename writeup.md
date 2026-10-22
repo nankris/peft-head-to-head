@@ -1,4 +1,4 @@
-# #101 LoRA vs DoRA vs QLoRA vs full fine-tune on one L4
+# LoRA vs DoRA vs QLoRA vs full fine-tune on one L4
 
 **Verdict: INCONCLUSIVE.** This follows the preregistered rule in `README.md`. H2 is **supported**: QLoRA matches LoRA at
 0.44× the VRAM. H1 is **inconclusive**: DoRA did *not* beat LoRA (the point estimate is −0.10 points), but the CI still crosses 0.
@@ -12,7 +12,7 @@ choice comes down to cost. QLoRA was as fast and as accurate as LoRA on less tha
 time for no gain.
 
 ## Setup (short; full protocol in README.md)
-Qwen/Qwen3-4B, AG News (4,000 train / 2,000 test, same subset as #038r), 250 steps at batch 16, 3 seeds (1234–1236) per arm, one
+Qwen/Qwen3-4B, AG News (4,000 train / 2,000 test, same subset as my [LoRA rank sweep](https://github.com/nankris/lora-rank-sweep)), 250 steps at batch 16, 3 seeds (1234–1236) per arm, one
 Colab NVIDIA L4 (22 GiB usable). Accuracy is the argmax over the summed log-probs of the 4 label strings. Zero-shot baseline:
 **73.30%**. Full fine-tune fit on the L4 (bf16 weights + 8-bit AdamW, optimizer step in backward), so **no fallback to 1.7B was needed**.
 
@@ -66,9 +66,9 @@ The table is also rendered as `figures/table.png`. Train CU = mean training minu
 ## Compute
 - **GPU:** NVIDIA L4 (Colab, 1.54 CU/h measured with only this session active).
 - **Kept runs** (13 runs, training + eval): 3.37 GPU-hours ≈ **5.2 CU**.
-- **Total session time billed** across 4 VMs (3 were lost after sandbox reboots; see README execution notes): 4.4–6.7 h,
+- **Total session time billed** across 4 VMs (3 were lost after restarts of the local monitoring machine; see README execution notes): 4.4–6.7 h,
   i.e. **≈ 6.8–10.2 CU**. The range exists because we only know a lost VM's last-seen time, not its exact end time.
-  Session `b6-101` was stopped at 13:36 UTC. (The account balance can't isolate our spend because another session was running.)
+  Session `peft-head-to-head` was stopped at 13:36 UTC. (The account balance can't isolate our spend because another session was running.)
 - Evidence: `figures/colab_run.txt` (nvidia-smi, per-run timing and result lines), `results/progress.log`, `results/poll.log`.
 
 ## Caveats

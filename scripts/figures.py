@@ -1,4 +1,4 @@
-"""Figures for #101 from results/analysis.json + runs.json. Run: /workspace/tools/mlenv/bin/python scripts/figures.py"""
+"""Figures for the PEFT comparison from results/analysis.json + runs.json. Run: python scripts/figures.py"""
 import json, os
 import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt

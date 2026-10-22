@@ -1,5 +1,5 @@
-"""Local analysis for #101. Reads results/runs.json + pred_*.json + test_labels.json, applies the README decision rule,
-writes results/summary.csv, results/analysis.json. Run: /workspace/tools/mlenv/bin/python scripts/analyze.py"""
+"""Local analysis for the PEFT comparison. Reads results/runs.json + pred_*.json + test_labels.json, applies the README decision rule,
+writes results/summary.csv, results/analysis.json. Run: python scripts/analyze.py"""
 import json, os, csv
 import numpy as np
 

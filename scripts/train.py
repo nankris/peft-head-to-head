@@ -1,13 +1,13 @@
-# Exp #101: PEFT head-to-head (LoRA / DoRA / QLoRA / full FT) on Qwen3-4B, AG News, one L4.
-# Data prep, prompt and scoring are copied from 038r (../038r-lora-rank-seeds/scripts/train.py).
-# Writes /content/out101/{runs.json,progress.log,pred_*.json,loss_*.json,metadata.json}. Resumable: finished runs are skipped.
+# Study: PEFT head-to-head (LoRA / DoRA / QLoRA / full FT) on Qwen3-4B, AG News, one L4.
+# Data prep, prompt and scoring are copied from the LoRA rank sweep (https://github.com/nankris/lora-rank-sweep).
+# Writes /content/peft-results/{runs.json,progress.log,pred_*.json,loss_*.json,metadata.json}. Resumable: finished runs are skipped.
 import gc, json, math, os, time, traceback
 import torch, torch.nn.functional as F
 from datasets import load_dataset
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 from peft import LoraConfig, get_peft_model
 
-OUT = os.environ.get("OUT", "/content/out101"); os.makedirs(OUT, exist_ok=True)
+OUT = os.environ.get("OUT", "/content/peft-results"); os.makedirs(OUT, exist_ok=True)
 LOG = open(f"{OUT}/progress.log", "a", buffering=1)
 def log(*a):
     s = time.strftime("%H:%M:%S ") + " ".join(str(x) for x in a)

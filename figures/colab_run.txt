@@ -1,4 +1,4 @@
-# Excerpts proving the #101 run (Colab L4, session b6-101). Full logs: results/progress.log, results/train_stdout.log, results/poll.log
+# Run evidence (Colab L4). Full logs: results/progress.log, results/train_stdout.log, results/poll.log
 
 ## nvidia-smi at end of run (VM4, after DONE)
 Sat Oct 17 13:36:31 2026       

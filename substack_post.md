@@ -5,13 +5,13 @@ Which parameter-efficient method should you pick? I ran LoRA, DoRA, QLoRA and fu
 
 Verdict: INCONCLUSIVE overall. QLoRA matched LoRA at 0.44 times the memory, so that claim is supported. DoRA did not beat LoRA, but its interval still crosses zero, so I cannot call it worse either.
 
-[IMAGE table.png]
+![Results](figures/table.png)
 
 Setup
 
 Model: Qwen/Qwen3-4B. Data: AG News, 4,000 training and 2,000 test articles. Each run was 250 steps at batch size 16, with 3 seeds (1234 to 1236) per method. Accuracy is the argmax over the summed log-probabilities of the four label strings. The zero-shot baseline was 73.30%.
 
-Full fine-tuning fit on the L4 using bf16 weights and 8-bit AdamW with the optimizer step done during the backward pass, so I did not need to fall back to a smaller model. GPU: one NVIDIA L4 on Colab. The kept runs used about 5.2 CU. Counting four VMs, three of which were lost to sandbox reboots, session time was roughly 6.8 to 10.2 CU.
+Full fine-tuning fit on the L4 using bf16 weights and 8-bit AdamW with the optimizer step done during the backward pass, so I did not need to fall back to a smaller model. GPU: one NVIDIA L4 on Colab. The kept runs used about 5.2 CU. Counting four VMs, three of which were lost to restarts of the local monitoring machine, session time was roughly 6.8 to 10.2 CU.
 
 Results
 
@@ -19,7 +19,7 @@ Mean accuracy over 3 seeds, with 95% CI: LoRA r16 91.48% (90.27 to 92.70), DoRA 
 
 The best and worst are 0.37 points apart. Every paired interval includes zero. DoRA minus LoRA was -0.10 points (CI -0.47 to +0.30). QLoRA minus LoRA was +0.10 (CI -0.35 to +0.55). Full minus LoRA was +0.27 (CI -0.22 to +0.77).
 
-[IMAGE accuracy.png]
+![Results](figures/accuracy.png)
 
 The cost is where they differ
 
@@ -29,7 +29,7 @@ I expected QLoRA's 4-bit dequantization to slow it down. On the L4 it did not: s
 
 Accuracy per training GPU-minute (gain over zero-shot divided by training minutes): QLoRA 2.49 (CI 2.24 to 2.74), LoRA 2.48 (CI 2.23 to 2.73), full 2.05 (CI 1.84 to 2.25), DoRA 0.95 (CI 0.86 to 1.05). QLoRA and LoRA are a statistical tie. QLoRA's real advantage is memory.
 
-[IMAGE accuracy_per_gpu_minute.png]
+![Results](figures/accuracy_per_gpu_minute.png)
 
 Verdict
 
